@@ -1,0 +1,617 @@
+p {
+    -ms-word-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    -webkit-hyphenate-before: 2;
+    -webkit-hyphenate-after: 3;
+    hyphenate-lines: 3;
+    -webkit-font-feature-settings: "liga", "dlig";
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+  }
+  
+  /********************* 
+  BASE (MOBILE) SIZE
+  *********************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  @font-face {
+    font-family: "Nostrav1.0-Stream";
+    src: url("http://saraherrlander.com/wp-content/themes/sara/library/css/Nostrav1.0-Stream.eot");
+    /* IE9 Compat Modes */
+    src: url("http://saraherrlander.com/wp-content/themes/sara/library/css/Nostrav1.0-Stream.eot?#iefix") format("embedded-opentype"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/Nostrav1.0-Stream.woff2") format("woff2"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/Nostrav1.0-Stream.woff") format("woff"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/Nostrav1.0-Stream.otf") format("truetype");
+    /* Safari, Android, iOS */
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "SuisseIntl-Light-WebS";
+    src: url("http://saraherrlander.com/wp-content/themes/sara/library/css/SuisseIntl-Light-WebS.eot");
+    /* IE9 Compat Modes */
+    src: url("http://saraherrlander.com/wp-content/themes/sara/library/css/SuisseIntl-Light-WebS.eot?#iefix") format("embedded-opentype"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/SuisseIntl-Light-WebS.woff2") format("woff2"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/SuisseIntl-Light-WebS.woff") format("woff"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/SuisseIntl-Light-WebS.ttf") format("truetype"), url("http://saraherrlander.com/wp-content/themes/sara/library/css/SuisseIntl-Light-WebS.svg#SuisseIntl-Light-WebS") format("svg");
+    /* Legacy iOS */
+    font-weight: normal;
+  }
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    hyphens: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 100%;
+    line-height: 1.12;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 5vw;
+    font-weight: normal;
+    overflow-x: hidden;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-weight: normal;
+    width: 100%;
+    font-display: swap;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "SuisseIntl-Light-WebS", sans-serif;
+    color: #ff3d00;
+  }
+  
+  a,
+  a:visited,
+  a:hover,
+  a:active,
+  a:focus {
+    color: #ff3d00;
+    text-decoration: none;
+    transition: 0.2s color;
+  }
+  
+  a:hover {
+    color: #eb3800;
+    transition: 0.2s color;
+  }
+  
+  .background-image-mobile {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: height 999999s;
+  }
+  .background-image-mobile img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .loader-text {
+    z-index: 5;
+    position: fixed;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    letter-spacing: -0.01em;
+    color: #ff3d00;
+  }
+  .loader-text b {
+    font-family: "Nostrav1.0-Stream", serif;
+    font-weight: normal;
+    font-size: 101%;
+  }
+  .loader-text i {
+    opacity: 0;
+  }
+  .loader-text h1 {
+    font-family: "SuisseIntl-Light-WebS", sans-serif;
+    font-size: 15vw;
+    text-align: center;
+    position: fixed;
+    top: 5vw;
+    margin: 0;
+    width: 90vw;
+    left: 5vw;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+  .loader-text p {
+    font-family: "SuisseIntl-Light-WebS", sans-serif;
+    font-size: 5vw;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    bottom: 5vw;
+    width: 85vw;
+    left: 7.5vw;
+    margin: 0;
+  }
+  .loader-text img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .missing-z {
+    font-size: 15vw;
+    font-family: "SuisseIntl-Light-WebS", sans-serif;
+    position: fixed;
+    z-index: 1;
+    color: #ff3d00;
+    left: 63vw;
+    top: 60vh;
+    text-transform: uppercase;
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    transform: rotate(12deg);
+    font-weight: normal;
+  }
+  
+  .text-content-desktop {
+    display: none;
+  }
+  
+  .text-content-iphone {
+    z-index: 3;
+    position: fixed;
+  }
+  .text-content-iphone b {
+    font-family: "Nostrav1.0-Stream", serif;
+    font-weight: normal;
+    font-size: 101%;
+  }
+  .text-content-iphone .name p {
+    font-size: 5vw;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    top: 5vw;
+    width: 75vw;
+    left: 12.5vw;
+    margin: 0;
+  }
+  .text-content-iphone .contact-link p,
+  .text-content-iphone .instagram-link p {
+    font-size: 3.25vw;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .text-content-iphone .contact-link {
+    position: fixed;
+    width: 98vw;
+    text-align: center;
+    left: 1vw;
+    top: 13vw;
+    transition: 0.5s bottom;
+  }
+  .text-content-iphone .contact-link a {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  .lazyload {
+    background-color: #ff3d00;
+  }
+  
+  .lazyloaded {
+    background-color: #ff3c0000;
+    transition: background-color 2.5s;
+  }
+  
+  .images {
+    width: 90vw;
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    padding-bottom: 30vh;
+    z-index: 2;
+  }
+  .images .image {
+    width: 90vw;
+    position: relative;
+    font-size: 0;
+    box-sizing: border-box;
+    margin-bottom: 15vw;
+  }
+  .images .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #archive-wrapper {
+    position: relative;
+    width: 100%;
+    top: 34vw;
+    left: 0;
+    overflow: hidden;
+    display: block;
+  }
+  #archive-wrapper .layout_archive {
+    display: flex;
+    width: 80vw;
+    position: relative;
+    left: 10vw;
+    flex-direction: column;
+  }
+  #archive-wrapper .layout_archive.layout_2_images_medium_-_top_aligned {
+    width: 70vw;
+    left: 15vw;
+  }
+  #archive-wrapper .layout_archive.layout_2_images_small_-_top_aligned {
+    width: 60vw;
+    left: 20vw;
+  }
+  #archive-wrapper .layout_archive .image {
+    width: 100%;
+    margin-bottom: 10vw;
+  }
+  #archive-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #info-wrapper {
+    position: relative;
+    top: 34vw;
+    left: 5vw;
+    overflow: hidden;
+    display: block;
+    width: 90vw;
+    font-family: "SuisseIntl-Light-WebS", sans-serif;
+    font-size: 4.25vw;
+    line-height: 1.25;
+  }
+  #info-wrapper .background-info {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #info-wrapper .background-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #info-wrapper .contact {
+    margin-bottom: 15vw;
+  }
+  #info-wrapper h3 {
+    text-transform: uppercase;
+  }
+  #info-wrapper h3 b {
+    font-family: "Nostrav1.0-Stream", serif;
+    font-weight: normal;
+    font-size: 101%;
+  }
+  
+  /*********************
+  LARGER MOBILE DEVICES 
+  *********************/
+  @media only screen and (max-width: 766px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+  /*********************
+  TABLET & SMALLER LAPTOPS
+  *********************/
+  @media only screen and (min-width: 768px) {
+    .loader-text {
+      z-index: 5;
+      position: fixed;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .loader-text h1 {
+      font-size: 9.5vw;
+      line-height: 0.9;
+      top: 1vw;
+      color: #ff3d00;
+    }
+    .loader-text p {
+      display: none;
+    }
+    .loader-text img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  
+    .missing-z {
+      font-size: 9.5vw;
+    }
+  
+    .text-content-iphone {
+      display: none;
+    }
+  
+    .text-content-desktop {
+      display: block;
+      bottom: 2vw;
+      position: fixed;
+      left: 1.5vw;
+      width: 97vw;
+      z-index: 1;
+    }
+    .text-content-desktop b {
+      font-family: "Nostrav1.0-Stream", serif;
+      font-weight: normal;
+      font-size: 101%;
+    }
+    .text-content-desktop p {
+      font-size: 1.1vw;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .text-content-desktop .des {
+      width: auto;
+      position: absolute;
+      left: 0.75vw;
+      bottom: 0;
+    }
+    .text-content-desktop .archive-link {
+      width: auto;
+      position: absolute;
+      right: 0.75vw;
+      bottom: 0;
+    }
+    .text-content-desktop .archive-link a {
+      margin: 0 0.75vw;
+    }
+  
+    .missing-z {
+      position: absolute;
+      left: 70vw;
+      bottom: 10vh;
+      top: auto;
+    }
+  
+    .missing-z-wrapper {
+      width: 90vw;
+      position: absolute;
+      bottom: 15vh;
+      top: auto;
+      left: 0vw;
+      transform-origin: bottom;
+      overflow: hidden;
+    }
+    .missing-z-wrapper .image {
+      width: 4.5%;
+      position: relative;
+      float: left;
+      padding: 0;
+      bottom: 0;
+      font-size: 0;
+      box-sizing: border-box;
+      margin: 0 0.25% 0 0.25%;
+      opacity: 0;
+    }
+    .missing-z-wrapper .image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .images {
+      width: 90vw;
+      position: fixed;
+      bottom: 15vh;
+      top: auto;
+      left: 5vw;
+      transform-origin: bottom;
+      overflow: hidden;
+      padding-bottom: 0;
+    }
+    .images .image {
+      width: 4.5vw;
+      width: 4.8%;
+      width: 4.5%;
+      width: 4.525%;
+      position: relative;
+      float: left;
+      padding: 0 0.25vw;
+      padding: 0;
+      bottom: 0;
+      font-size: 0;
+      box-sizing: border-box;
+      margin: 0;
+      margin: 0 0.1% 0 0.1%;
+      margin: 0 0.5% 0 0%;
+    }
+    .images .image:last-child {
+      margin-right: 0;
+    }
+    .images .image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .background {
+      height: 100vh;
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+    }
+  
+    .background .backgroundimage {
+      height: 100%;
+      width: 100%;
+    }
+    .background .backgroundimage img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  
+    img {
+      height: 100%;
+      width: auto;
+    }
+  
+    #archive-wrapper {
+      top: 0vw;
+    }
+    #archive-wrapper .layout_archive {
+      display: flex;
+      width: 100vw;
+      position: relative;
+      left: 0vw;
+      flex-direction: row;
+      margin-bottom: 7.5vw;
+      margin-top: 7.5vw;
+      justify-content: space-around;
+    }
+    #archive-wrapper .layout_archive.layout_1_image_big__-_left_aligned .image {
+      width: 70vw;
+      left: 15vw;
+      top: 15vh;
+      height: 70vh;
+      left: 0;
+    }
+    #archive-wrapper .layout_archive.layout_1_image_medium__-_center_aligned .image {
+      width: 60vw;
+      height: 60vh;
+      left: 20vw;
+      top: 20vh;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_medium_-_bottom_aligned .image {
+      width: 35vw;
+      left: 5vw;
+      top: 15vh;
+      height: 70vh;
+      left: 0;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_medium_-_bottom_aligned img {
+      object-position: bottom;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_medium_-_top_aligned {
+      width: 100%;
+      left: 0;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_medium_-_top_aligned .image {
+      width: 35vw;
+      left: 5vw;
+      top: 15vh;
+      height: 70vh;
+      left: 0;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_medium_-_top_aligned img {
+      object-position: top;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_big_-_centered_aligned .image {
+      width: 40vw;
+      left: 5vw;
+      height: 70vh;
+      top: 15vh;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_small_-_top_aligned {
+      width: 100%;
+      left: 0vw;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_small_-_top_aligned .image {
+      width: 25vw;
+      height: 50vh;
+      left: 0;
+    }
+    #archive-wrapper .layout_archive.layout_2_images_small_-_top_aligned img {
+      object-position: top;
+    }
+    #archive-wrapper .layout_archive .image {
+      margin-bottom: 0;
+    }
+    #archive-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    #info-wrapper {
+      position: relative;
+      top: 5vw;
+      left: 5vw;
+      overflow: hidden;
+      display: block;
+      width: 90vw;
+      font-family: "SuisseIntl-Light-WebS", sans-serif;
+      font-size: 1.1vw;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    #info-wrapper .contact {
+      margin-bottom: 0vw;
+      width: 40%;
+    }
+    #info-wrapper .about {
+      width: 40%;
+    }
+    #info-wrapper h3 {
+      text-transform: uppercase;
+    }
+    #info-wrapper h3 b {
+      font-family: "Nostrav1.0-Stream", serif;
+      font-weight: normal;
+      font-size: 101%;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-aspect-ratio: 9/7) {
+    body.not-mobile #single-container .slide {
+      height: 60vh;
+    }
+    body.not-mobile #single-container .slide-video .slide-video-container {
+      height: 60vh;
+    }
+  
+    body.not-mobile #desktop-container .featured-image-container .feature-image-single {
+      height: 60vh;
+    }
+  }
+  /*********************
+  DESKTOP
+  *********************/
+  /*********************
+  LARGE VIEWING SIZE
+  This is for the larger monitors and possibly full screen viewers.
+  *********************/
+  /*********************
+  RETINA (2x RESOLUTION DEVICES)
+  
+  *********************/
+  /*********************
+  PRINT STYLESHEET 
+  
+  *********************/
+  
