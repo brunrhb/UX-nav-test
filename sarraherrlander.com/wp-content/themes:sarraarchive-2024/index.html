@@ -286,7 +286,7 @@
                 font-size: var(--wp--preset--font-size--x-large) !important;
             }
         </style>
-        <link rel='stylesheet' id='style-css' href='https://saraherrlander.com/wp-content/themes/saraarchive-2024/build/library/scss/style.css' type='text/css' media='all'/>
+        <link rel='stylesheet' id='style-css' href='build/library/scss/style.css' type='text/css' media='all'/>
         <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js' id='jquery-core-js'></script>
         <script type='text/javascript' src='https://code.jquery.com/jquery-migrate-3.0.0.min.js' id='jquery-migrate-js'></script>
         <link rel="https://api.w.org/" href="https://saraherrlander.com/wp-json/"/>
@@ -299,18 +299,18 @@
     <style>
         @font-face {
             font-family: 'Nostrav1.0-Stream';
-            src: url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.eot');
+            src: url('css/Nostrav1.0-Stream.eot');
             /* IE9 Compat Modes */
-            src: url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.woff2') format('woff2'), /* Super Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.woff') format('woff'), /* Pretty Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.otf') format('truetype');
+            src: url('css/Nostrav1.0-Stream.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.woff2') format('woff2'), /* Super Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.woff') format('woff'), /* Pretty Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/Nostrav1.0-Stream.otf') format('truetype');
             /* Safari, Android, iOS */
             font-weight: normal;
         }
 
         @font-face {
             font-family: 'SuisseIntl-Light-WebS';
-            src: url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.eot');
+            src: url('css/SuisseIntl-Light-WebS.eot');
             /* IE9 Compat Modes */
-            src: url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.woff2') format('woff2'), /* Super Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.woff') format('woff'), /* Pretty Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.ttf') format('truetype'), /* Safari, Android, iOS */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.svg#SuisseIntl-Light-WebS') format('svg');
+            src: url('SuisseIntl-Light-WebS.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.woff2') format('woff2'), /* Super Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.woff') format('woff'), /* Pretty Modern Browsers */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.ttf') format('truetype'), /* Safari, Android, iOS */ url('https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/css/SuisseIntl-Light-WebS.svg#SuisseIntl-Light-WebS') format('svg');
             /* Legacy iOS */
             font-weight: normal;
         }
@@ -533,7 +533,23 @@
                 <img class="lazyload" data-src="https://saraherrlander.com/wp-content/uploads/2023/03/sebastian-large-2-1.jpg" alt="Sara Herrlander"/>
             </div>
         </div>
-        <script type='text/javascript' src='https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/js/general.js' id='general-js'></script>
-        <script type='text/javascript' src='https://saraherrlander.com/wp-content/themes/saraarchive-2024/library/js/libs/responsivelyLazy.min.js' id='responsivelyLazy.min-js'></script>
+        <script type='text/javascript' src="js/general.js" id='general-js'></script>
+        <script type='text/javascript' src="js/libs/responsivelyLazy.min.js" id='responsivelyLazy.min-js'></script>
+        
+        <!--test-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                console.log("Le DOM est chargé.");
+                var body = document.body;
+                if (body) {
+                    console.log("Le corps du document existe.");
+                    body.classList.add("not-mobile");
+                    console.log("La classe 'not-mobile' a été ajoutée au corps du document.");
+                } else {
+                    console.log("Erreur : impossible de trouver le corps du document.");
+                }
+            });
+        </script>
+        
     </body>
 </html>
